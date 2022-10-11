@@ -10,14 +10,14 @@ int main(int argc, char** argv){
         total_Sum = 0;
 
         #pragma omp for
-        for(i = 1; i <= 10000000; i++){
+        for(i = 1; i <= 1000000000000; i++){
             partial_Sum += i;
         }
 
         #pragma omp critical
         {
-                //add each threads partial sum to the total sum
-                total_Sum += partial_Sum;
+            //add each threads partial sum to the total sum
+            total_Sum += partial_Sum;
         }
     }
     printf("Total Sum: %lld\n", total_Sum);
