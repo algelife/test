@@ -10,7 +10,7 @@ int main(int argc, char** argv){
         total_Sum = 0;
 
         #pragma omp for
-        for(i = 1; i <= 500000000000; i++){
+        for(i = 1; i <= 500000000000; i++){ //iteration was changed
             partial_Sum += i;
         }
 
